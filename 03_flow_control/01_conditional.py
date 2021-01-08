@@ -32,3 +32,20 @@ else:
 is_friend = True
 can_message = 'message allowed' if is_friend else "not allowed to message"
 print(can_message)
+
+# Short Circuiting
+# and
+# or
+# not
+
+# Logical operator
+# <
+# >
+# >=
+# <=
+# ==
+# !=
+
+print(True == 1)  # True
+print([] == [])  # True
+print([] is [])  # False (different memory location)
