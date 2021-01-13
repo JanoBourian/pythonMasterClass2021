@@ -87,3 +87,75 @@ def largest_even(number_list) -> float:
 
 
 print(largest_even([10, 2, 3, 4, 8, 11]))
+
+
+# Walrus Operator :=  (3.8.* or superior)
+
+a = 'mathus'
+
+if (n := len(a)) < 10:
+    print(f"Too long {n} elements")
+
+# Output: Too long 6 elements
+
+# Walrus Operator in a while expression
+
+while ((n := len(a)) > 0):
+    print(a[n-1], end="")
+    a = a[:-1]
+
+# Output: suhtam
+
+
+# SCOPE - what variables do I have access to?
+
+# 1.- start with local
+# 2.- Parent local?
+# 3.- Blobal
+# 4.- Built in functions
+
+a = 1
+
+
+def parent():
+    a = 10
+
+    def confusion():
+        return a
+    return confusion()
+
+
+print(parent())
+print(a)
+
+# global Keyword
+
+total = 0
+
+
+def count():
+    global total
+    total += 1
+    return total
+
+
+count()
+count()
+print(count())
+print(total)
+
+
+# nonlocal
+
+def outer():
+    x = 'local'
+
+    def inner():
+        nonlocal x
+        x = 'nonlocal'
+        print("inner: ", x)
+    inner()
+    print("outer: ", x)
+
+
+outer()
