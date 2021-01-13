@@ -39,3 +39,12 @@ new_user('frank', 'muniz', 38, games=['javascript',
 
 new_user('andrei', 'robles', 31, games=['javascript',
                                         'python'], nickname='janobourian')
+
+
+def sum(num1, num2) -> float:
+    return num1 + num2
+
+
+result = sum(2, 3)
+
+print(f"The answer is: {result}")
