@@ -43,3 +43,5 @@ wizard1.player_attack()
 archer1 = Archer('Legolas', 'elfo@mail.com', '*******', 30)
 print(archer1.email)
 archer1.player_attack()
+
+print(Wizard.mro())
